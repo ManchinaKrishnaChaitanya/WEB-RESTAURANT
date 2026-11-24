@@ -1,0 +1,304 @@
+
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #fffaf2;
+    color: #333;
+}
+
+/* Navigation Bar */
+header {
+    background-color: #3b1f0f;
+    padding: 18px 7%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #ffb347;
+    font-size: 27px;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.navbar a:hover {
+    color: #ffb347;
+}
+
+/* Hero Section */
+.hero {
+    height: 500px;
+    background:
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+        url("https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1600")
+        center/cover no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 19px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #e87924;
+    color: white;
+    padding: 13px 25px;
+    text-decoration: none;
+    border-radius: 7px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #bd5410;
+}
+
+/* Common Section Styling */
+section {
+    padding: 65px 7%;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 32px;
+    color: #713b19;
+    margin-bottom: 15px;
+}
+
+.section-description {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+/* Food Menu */
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.food-card {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.food-card:hover {
+    transform: translateY(-7px);
+}
+
+.food-card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+.food-card h3 {
+    margin: 15px 0 10px;
+    color: #542d15;
+}
+
+.food-card p {
+    padding: 0 12px;
+    color: #666;
+}
+
+.food-card h4 {
+    color: #d65d16;
+    margin: 12px;
+    font-size: 21px;
+}
+
+.food-card button {
+    background-color: #e87924;
+    color: white;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.food-card button:hover {
+    background-color: #bd5410;
+}
+
+/* Special Offers */
+.offers {
+    background-color: #fff0d8;
+}
+
+.offer-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.offer-card {
+    background-color: #fff;
+    padding: 30px 20px;
+    text-align: center;
+    border-radius: 12px;
+    border: 2px dashed #e87924;
+}
+
+.offer-card h3 {
+    color: #d65d16;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+/* Customer Reviews */
+.review-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.review-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.review-card h3 {
+    color: #713b19;
+    margin-bottom: 10px;
+}
+
+.stars {
+    color: #f5a623;
+    margin-bottom: 12px;
+    font-size: 20px;
+}
+
+/* Contact Section */
+.contact {
+    background-color: #fff0d8;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin: 35px 0;
+    text-align: center;
+}
+
+.contact-container div {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.contact-container h3 {
+    color: #713b19;
+    margin-bottom: 10px;
+}
+
+.contact iframe {
+    border-radius: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #3b1f0f;
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+footer h3 {
+    color: #ffb347;
+    margin-bottom: 10px;
+}
+
+footer p {
+    margin: 8px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .menu-container,
+    .offer-container,
+    .review-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+
+    .menu-container,
+    .offer-container,
+    .review-container,
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        height: 400px;
+    }
+
+    .hero-content h1 {
+        font-size: 27px;
+    }
+}
